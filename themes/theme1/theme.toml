@@ -1,0 +1,13 @@
+name = "aether"
+license = "CC 3.0"
+licenselink = "https://creativecommons.org/licenses/by/3.0/"
+description = "A brief theme"."
+homepage = "https://github.com/luispabloastro/theme1"
+tags = ["blog", "clean", "customizable", "dark", "highlighting", "minimal", "personal", "responsive", "simple"]
+features = ["blog", "syntax highlighting"]
+min_version = 0.54
+
+[author]
+  name = "Luispastro"
+  homepage = "https://Luispastro.com"
+
