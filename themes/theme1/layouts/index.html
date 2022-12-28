@@ -1,0 +1,165 @@
+{{ partial "header.html" . }}
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="/">
+                            <span class="icon">
+                                <img src="{{ .Params.logo }}">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="inner">
+                            <h1>{{ .Title | default "Title" }}</h1>
+                            {{ if .Params.description }}
+                            <p>
+                                {{ .Params.description }}
+                            </p>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            {{ range .Pages.ByDate }}
+                                {{if .Title }}
+                                    {{if .Content}}
+                                        <li>
+                                            <a href="#{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">{{ .Title }}</a>
+                                        </li>
+                                    {{ else }}
+                                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </nav>
+                </header>
+
+            <!-- Main -->
+                <div id="main">
+
+                    {{ range .Pages }}
+                        {{if .Title }}
+                            {{if .Content }}
+                                <article id="{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">
+                                    <h2 class="major">{{ .Title }}</h2>
+                                    <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
+                                    {{ .Content }}
+                                </article>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+
+                </div>
+
+                <div id="container">
+
+                    <!-- Podcast-->
+
+                    <section class="section">
+                        <div class="container px-4 px-lg-5">
+                            <!-- Featured wiki Row-->
+                            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+
+                                <!-- <div class="col-xl-8 col-lg-7">
+                                    <img alt="..." class="img-fluid mb-3 mb-lg-0" src="" />
+                                </div> -->
+
+                                <div class="col-xl-4 col-lg-5">
+                                    <div class="featured-text text-center text-lg-left">
+
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                        <h2>Youtube</h2>
+                                        <br>
+                                        <br>
+                                        
+                                        <div><img src="images/serg.webp" alt=""></div>
+                                        <br>
+                                        <br>
+                                        
+                                        <p class=" mb-0">Descripción Canal</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <br/>
+                    
+                    <!-- Podcast-->
+                    <section class="section">
+                        <div class="container px-4 px-lg-5">
+                            <!-- Featured wiki Row-->
+                            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                                <!-- <div class="col-xl-8 col-lg-7"><img alt="..." class="img-fluid mb-3 mb-lg-0" src="images/pod.webp" />
+                                </div> -->
+                                <div class="col-xl-4 col-lg-5">
+                                    <div class="featured-text text-center text-lg-left">
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                        <h2>Podcast</h2>
+                                        <br>
+                                        <br>
+
+                                        <div><img src="images/pod.webp" alt=""></div>
+                                        <br>
+                                        <br>
+                                        <p class="mb-0">Descripción Canal</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--<!-- Shorts-->
+
+                    <section class="section" id="wiki">
+                        <div class="container px-4 px-lg-5">
+                            <!-- Featured wiki Row-->
+                            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                                <!-- <div class="col-xl-8 col-lg-7"><img alt="..." class="img-fluid mb-3 mb-lg-0" src="images/you.webp" />
+                                </div> -->
+                                <div class="col-xl-4 col-lg-5">
+                                    <div class="featured-text text-center text-lg-left">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <h2>Shorts</h2>
+
+                                        <div><img src="images/you.webp" alt=""></div>
+                                        
+                                        <p class=" mb-0">Descripción Canal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+
+                {{ partial "design.html" .}}
+
+        </div>
+        
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+</body>
+
+{{ partial "footer.html" .}}
