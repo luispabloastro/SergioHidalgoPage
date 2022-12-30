@@ -90,7 +90,7 @@ and go to `localhost:1313` in your browser. From now on all the changes you make
 
 If you like my work and want to support the development of the project, now you can! Just:
 
-<a href="https://www.buymeacoffee.com/dasnaghi" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
+<a href="https://www.buymeacoffee.com/luispastro" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
 
 
 ## License
